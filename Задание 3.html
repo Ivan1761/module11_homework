@@ -1,0 +1,12 @@
+
+  function createAdder(a) {
+  return function(b) {
+    return a + b;
+  };
+}
+
+const add5 = createAdder(5);
+const result = add5(10); // ожидается 15
+
+console.log(result); // выводит 15
+

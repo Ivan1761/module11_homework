@@ -1,0 +1,29 @@
+function checkPrime(number) {
+  if (typeof number !== 'number' || isNaN(number) || !Number.isInteger(number)) {
+    console.log('Некорректный ввод: необходимо целое число');
+    return;
+  }
+
+  if (number > 1000) {
+    console.log('Данные неверны: число больше 1000');
+    return;
+  }
+
+  if (number <= 1) {
+    console.log(`${number} — не является простым числом.`);
+    return;
+  }
+
+  
+  const maxDivisor = Math.sqrt(number);
+  for (let i = 2; i <= maxDivisor; i++) {
+    if (number % i === 0) {
+      console.log(`${number} — не является простым числом.`);
+      return;
+    }
+  }
+
+  console.log(`${number} — простое число.`);
+}
+
+

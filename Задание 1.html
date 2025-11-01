@@ -1,0 +1,23 @@
+
+function countEvenOddZero(arr) {
+ 
+  let countEven = 0;
+  let countOdd = 0;
+  let countZero = 0;
+
+  for (let item of arr) {
+   
+    if (typeof item === 'number' && !isNaN(item)) {
+      if (item === 0) {
+        countZero++;
+      } else if (item % 2 === 0) {
+        countEven++;
+      } else {
+        countOdd++;
+      }
+    }
+  }
+
+  console.log(`Четных чисел: ${countEven}`);
+  console.log(`Нечетных чисел: ${countOdd}`);
+  console.log(`Нулей: ${countZero}`);
